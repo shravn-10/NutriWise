@@ -1,26 +1,23 @@
-// Function to get query parameters from URL
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
 
-// Get the cuisine from the query parameter
 const cuisine = getQueryParameter('cuisine');
 
-// Function to search recipes using the API
 async function searchRecipes(cuisine) {
-    const query = `healthy ${cuisine} `;
+    const query = `${cuisine} `;
     try {
-        const response = await fetch(`https://api.edamam.com/search?q=${query}&random=true&app_id=7aa516a5&app_key=dc836a223fb788b11ae390504d9e97ce&from=0&to=20&random=true`);
+        // TO WORK ON THE QUERY
+        const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=7aa516a5&app_key=dc836a223fb788b11ae390504d9e97ce&from=0&to=20&random=true`);
         const data = await response.json();
         displayRecipes(data.hits);
     } catch (error) {
         console.error("Error fetching recipes:", error);
-        displayRecipes([]); // Display no dishes message if there's an error
+        displayRecipes([]);
     }
 }
 
-// Function to display the recipes
 function displayRecipes(recipes) {
     const resultsList = document.querySelector('#results');
     let html = '';
@@ -40,5 +37,4 @@ function displayRecipes(recipes) {
     resultsList.innerHTML = html;
 }
 
-// Search recipes for the selected cuisine
 searchRecipes(cuisine);

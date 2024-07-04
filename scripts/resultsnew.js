@@ -1,13 +1,10 @@
-// Function to get query parameters from URL
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
 
-// Get the cuisine from the query parameter
 const cuisine = getQueryParameter('cuisine');
 
-// Function to search recipes using the API
 async function searchRecipes(cuisine) {
     const query = `healthy ${cuisine}`;
     try {
@@ -16,11 +13,10 @@ async function searchRecipes(cuisine) {
         displayRecipes(data.hits);
     } catch (error) {
         console.error("Error fetching recipes:", error);
-        displayRecipes([]); // Display no dishes message if there's an error
+        displayRecipes([]);
     }
 }
 
-// Function to display the recipes
 function displayRecipes(recipes) {
     const resultsList = document.querySelector('#results');
     let html = '';
@@ -39,7 +35,6 @@ function displayRecipes(recipes) {
     }
     resultsList.innerHTML = html;
 
-    // Add event listeners to the recipe cards
     const recipeCards = document.querySelectorAll('.recipe-card');
     recipeCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -48,5 +43,4 @@ function displayRecipes(recipes) {
     });
 }
 
-// Search recipes for the selected cuisine
 searchRecipes(cuisine);
