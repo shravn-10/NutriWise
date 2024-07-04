@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - NutriWise</title>
+    <link rel="stylesheet" href="second_page.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Survey Results</h1>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <div class="result-card" id="bmi-result"></div>
+            <div class="result-card" id="age-decade-result"></div>
+            <div class="result-card" id="exercise-hours-result"></div>
+        </div>
+        <div class="right-column">
+            <div class="final-message-card" id="final-message"></div>
+        </div>
+    </div>
+    <script src="result_page.js"></script>
+    <button id="nextButton" style="display:block; margin: 20px auto; padding: 10px 20px; font-size: 1em;">Next</button>
+    
+    <script src="result_page.js"></script>
+    <script>
+        // Add an event listener for the Next button
+        document.getElementById('nextButton').addEventListener('click', function() {
+            window.location.href = 'cuisinepage.html';
+        });
+    </script>
+</body>
+</html>
