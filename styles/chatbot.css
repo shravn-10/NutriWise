@@ -20,16 +20,16 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid #000;
-  height: 80vh; /* Adjusted height for better visibility */
+  height: 80vh;
   margin: auto;
 }
 
 .header {
   /* background: linear-gradient(to right, #5fdf5d, #e6ebe5); */
-  padding: 20px 10px; /* Increased padding for better header appearance */
+  padding: 20px 10px;
   text-align: center;
   border-bottom: 1px solid #000;
-  border-radius: 15px 15px 0 0; /* Rounded top corners */
+  border-radius: 15px 15px 0 0;
 }
 
 .header h1 {
@@ -53,7 +53,7 @@ body {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  max-height: calc(80vh - 120px); /* Adjusted for improved chat display */
+  max-height: calc(80vh - 120px);
   backdrop-filter: blur(10px);
   scrollbar-width: thin;
   scrollbar-color: #673ab7 #fff;
@@ -62,10 +62,10 @@ body {
 .input-group {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centered button and input */
+  justify-content: center;
   background-color:rgb(10, 109, 4);
   padding: 10px;
-  border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+  border-radius: 0 0 15px 15px;
 }
 
 input[type="text"] {
@@ -75,10 +75,10 @@ input[type="text"] {
   font-size: 16px;
   outline: none;
   background: transparent;
-  color: #ffffff; /* Changed input text color for better contrast */
+  color: #ffffff;
   margin-right: 10px;
   height: 40px;
-  border-radius: 5px; /* Rounded input */
+  border-radius: 5px;
 }
 
 button {
@@ -91,7 +91,7 @@ button {
   transition: background-color 0.3s;
   height: 40px;
   margin-right: 5px;
-  border-radius: 5px; /* Rounded button */
+  border-radius: 5px;
 }
 
 button:hover {
@@ -168,7 +168,7 @@ button:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .footer a {
@@ -177,7 +177,7 @@ button:hover {
 }
 
 .footer a:hover {
-  color: #f3f3ef; /* Matched hover color with header text */
+  color: #f3f3ef;
 }
 
 .footer p {

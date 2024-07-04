@@ -13,7 +13,7 @@ let rightArrowClickCount = 0;
 
 async function fetchRecipes() {
     try {
-        // const response = await fetch('https://api.edamam.com/api/recipes/v2?type=public&app_id=22a10e41&app_key=%203c8283966b138fb4e09ac5ec5202e7f2%09&cuisineType=American&cuisineType=Asian&cuisineType=British&cuisineType=Caribbean&cuisineType=Central%20Europe&cuisineType=Chinese&cuisineType=Eastern%20Europe&cuisineType=French&cuisineType=Indian&cuisineType=Italian&cuisineType=Japanese&cuisineType=Kosher&cuisineType=Mediterranean&cuisineType=Mexican&cuisineType=Middle%20Eastern&cuisineType=Nordic&cuisineType=South%20American&cuisineType=South%20East%20Asian&random=true&field=label&field=image&field=url&field=shareAs&field=yield&field=dietLabels&field=healthLabels&field=calories&field=cuisineType&field=mealType&field=dishType');
+        const response = await fetch('https://api.edamam.com/api/recipes/v2?type=public&app_id=22a10e41&app_key=%203c8283966b138fb4e09ac5ec5202e7f2%09&cuisineType=American&cuisineType=Asian&cuisineType=British&cuisineType=Caribbean&cuisineType=Central%20Europe&cuisineType=Chinese&cuisineType=Eastern%20Europe&cuisineType=French&cuisineType=Indian&cuisineType=Italian&cuisineType=Japanese&cuisineType=Kosher&cuisineType=Mediterranean&cuisineType=Mexican&cuisineType=Middle%20Eastern&cuisineType=Nordic&cuisineType=South%20American&cuisineType=South%20East%20Asian&random=true&field=label&field=image&field=url&field=shareAs&field=yield&field=dietLabels&field=healthLabels&field=calories&field=cuisineType&field=mealType&field=dishType');
         const data = await response.json();
         
         recipes = data.hits.map(hit => hit.recipe);
