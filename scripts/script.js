@@ -96,43 +96,6 @@ nahButton.addEventListener('click', async () => {
 
     displayRecipe(currentRecipeIndex);
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const leftArrow = document.getElementById('left-arrow');
-    const rightArrow = document.getElementById('right-arrow');
-    const recipeImage = document.querySelector('.recipe img');
-
-    const images = ['./assets/recipe1.jpg', './assets/recipe2.jpg', './assets/recipe3.jpg']; // Add your image paths here
-    let currentImageIndex = 0;
-
-    function changeImage(index) {
-        recipeImage.style.opacity = 0; // Start fade out
-        setTimeout(() => {
-            recipeImage.src = images[index];
-            recipeImage.style.opacity = 1; // Fade in new image
-        }, 500); // Match this duration with CSS transition time
-    }
-
-    leftArrow.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        changeImage(currentImageIndex);
-    });
-
-    rightArrow.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        changeImage(currentImageIndex);
-    });
-});
-
-// Example script.js for toggling additional buttons visibility based on arrow clicks
-
-let arrowClickCount = 0;
-
-document.getElementById('right-arrow').addEventListener('click', function() {
-    arrowClickCount++;
-    if (arrowClickCount > 2) {
-        document.getElementById('additional-buttons').style.display = 'flex';
-    }
-});
 
 function NavigateToRecipeFinder() {
     window.location.href = "pages/recipeFinder.html";

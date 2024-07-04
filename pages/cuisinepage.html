@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="../styles/cuisinepage.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../assets/logo1.png" alt="NutriWise Logo" class="NutriWiseLogo">
+            <span style="font-size: 2em;">NutriWise</span>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="chatbot.html">Chat</a>
+            <!-- <div class="dropdown"> -->
+                <a href="cuisinepage.html">Cuisines</a>
+                <!-- <div class="dropdown-content"> -->
+                    <!-- <a href="#">Indian</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Mexican</a>
+                    <a href="#">American</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Others</a> -->
+                <!-- </div> -->
+            </div>
+        </div>
     <h1 style="color :white;text-align: center;font-size: 2.8em;">Select cuisine</h1></p>
     <!-- TO BE WORKED ON LATER -->
     <!-- <header> -->
@@ -67,7 +87,17 @@
             <div class="recipe-card" onclick="selectDish(this)">
                 <img src="../assets/south indian.jpg" alt="south indian">
                 <div class="recipe-info">
-                    <h2 id="Indian">Indian</h2>
+                    <h2 id="South Indian">South Indian</h2>
+                    <p>India</p>
+                    <div class="recipe-meta">
+                        <span><img src="../assets/india.png" alt="India"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card" onclick="selectDish(this)">
+                <img src="../assets/north indian.jpg" alt="north indian">
+                <div class="recipe-info">
+                    <h2 id="North Indian">North Indian</h2>
                     <p>India</p>
                     <div class="recipe-meta">
                         <span><img src="../assets/india.png" alt="India"></span>

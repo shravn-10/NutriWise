@@ -15,30 +15,32 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="./pages/chatbot.html">Chat</a>
-            <a href="./pages/cuisinepage.html">Cuisines</a>
+            <div class="dropdown">
+                <a href="./pages/cuisinepage.html">Cuisines</a>
+                <!-- <div class="dropdown-content">
+                    <a href="#">Indian</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Mexican</a>
+                    <a href="#">American</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Others</a>
+                </div> -->
+            </div>
         </div>
     </div>
 
     <div class="main-content">
-        <div class="content-wrapper">
-            <div class="recipe-details">
-                <div class="recipe-container">
-                    <div class="recipe" id="recipe">
-                        <img src="./assets/recipe1.jpg" alt="Recipe Image">
-                        <h2>Recipe Title</h2>
-                    </div>
-                    <div class="arrow" id="right-arrow">&#8594;</div>
-                </div>
-            </div>
-            <div class="buttons">
-                <button class="button" id="like-button">Like</button>
-                <button class="button" id="nah-button">Nah!</button>
-            </div>
-            <div class="additional-buttons" id="additional-buttons">
-                <button class="zoom-button" id="sign-in-button" onclick="NavigateToFirstPage()">Customize your preferences with a survey!</button>
-                <button class="zoom-button" id="recipe-find-button" onclick="NavigateToRecipeFinder()">Have limited ingredients? Click here!</button>
-            </div>
+        <div class="recipe-container">
+            <div class="arrow" id="left-arrow">&#8592;</div>
+            <div class="recipe" id="recipe"></div>
+            <div class="arrow" id="right-arrow">&#8594;</div>
         </div>
+        <div class="buttons">
+            <button class="button" id="like-button">Like</button>
+            <button class="button" id="nah-button">Nah!</button>
+        </div>
+        <button class="zoom-button" id="sign-in-button" onclick="NavigateToFirstPage()">Customize your preferences with a survey!</button>
+        <button class="zoom-button" id="recipe-find-button" onclick="NavigateToRecipeFinder()">Have limited ingredients? Click here!</button>
     </div>
 
     <footer>
