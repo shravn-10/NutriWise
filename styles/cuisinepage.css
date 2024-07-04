@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #1b1a1a;
-    background-image: url("images/background\ 1.png");
+    background-image: url("../assets/background\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
