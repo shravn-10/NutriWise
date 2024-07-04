@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriWise</title>
-    <link rel="stylesheet" href="first_page.css">
+    <link rel="stylesheet" href="../styles/first_page.css">
 </head>
 <body>
     <header class="main-header">
@@ -14,7 +14,7 @@
         <div class="card">
             <div class="question">
                 <label for="cuisine">Imagine you are planning your dream vacation. <br>Which country’s cuisine would you indulge in the most?</label>
-                <img src="for the questio 1300bf83-08d0-4962-ab2c-b6990c513745.png" class="question_img">
+                <img src="../assets/for the questio 1300bf83-08d0-4962-ab2c-b6990c513745.png" class="question_img">
                 <input type="text" id="cuisine" name="cuisine">
             </div>
             <button type="button" class="next-btn">Next</button>
@@ -22,7 +22,7 @@
         <div class="card">
             <div class="question">
                 <label for="dietary-restrictions">Are there any ingredients or foods you avoid because they make you feel unwell?</label>
-                <img src="Are there any i bced957f-1a8f-4d87-aa45-0867fcab1da3.png" class="question_img">
+                <img src="../assets/Are there any i bced957f-1a8f-4d87-aa45-0867fcab1da3.png" class="question_img">
                 <input type="text" id="dietary-restrictions" name="dietary-restrictions">
             </div>
             <button type="button" class="next-btn">Next</button>
@@ -30,7 +30,7 @@
         <div class="card">
             <div class="question">
                 <label for="purpose">What inspired you to visit our website today?</label>
-                <img src="inspiration ef9ef9a5-151b-481c-a81e-9431d75ee6aa.png" class="question_img">
+                <img src="../assets/inspiration ef9ef9a5-151b-481c-a81e-9431d75ee6aa.png" class="question_img">
                 <div class="radio-group">
                     <input type="radio" id="recipes" name="purpose_website" value="recipes">
                     <label for="recipes">Seek New Recipes</label>
@@ -45,7 +45,7 @@
         <div class="card">
             <div class="question">
                 <label for="height">If you were entering a theme park with height requirements, what number would you write on your entry form in centimeters?</label>
-                <img src="measuring heigh 82802f30-be41-41d7-86b8-6b030c12452a.png" class="question_img">
+                <img src="../assets/measuring heigh 82802f30-be41-41d7-86b8-6b030c12452a.png" class="question_img">
                 <input type="range" id="height" name="height" min="50" max="250" oninput="document.getElementById('height-value').innerText = this.value">
                 <span id="height-value">100</span> cm
             </div>
@@ -54,7 +54,7 @@
         <div class="card">
             <div class="question">
                 <label for="weight-lift">In a fitness challenge, participants are asked to lift weights equal to their own weight. What weight would you lift?</label>
-                <img src="WhatsApp Image 2024-07-04 at 12.37.29_4f96faea.jpg" class="question_img">
+                <img src="../assets/WhatsApp Image 2024-07-04 at 12.37.29_4f96faea.jpg" class="question_img">
                 <input type="range" id="weight-lift" name="weight-lift" min="0" max="200" oninput="document.getElementById('weight-value').innerText = this.value">
                 <span id="weight-value">0</span> kg
             </div>
@@ -63,7 +63,7 @@
         <div class="card">
             <div class="question">
                 <label for="age-decade">Which decade of life are you currently in (e.g., 20s, 30s, 40s)?</label>
-                <img src="WhatsApp Image 2024-07-04 at 12.38.53_59319008.jpg" class="question_img">
+                <img src="../assets/WhatsApp Image 2024-07-04 at 12.38.53_59319008.jpg" class="question_img">
                 <input type="range" id="age-decade" name="age-decade" min="10" max="100" step="10" oninput="document.getElementById('age-decade-value').innerText = this.value">
                 <span id="age-decade-value">0</span> years
             </div>
@@ -72,13 +72,13 @@
         <div class="card">
             <div class="question">
                 <label for="exercise-hours">How many hours per week do you spend exercising or engaging in physical activity?</label>
-                <img src="WhatsApp Image 2024-07-04 at 12.39.42_5a449b05.jpg" class="question_img">
+                <img src="../assets/WhatsApp Image 2024-07-04 at 12.39.42_5a449b05.jpg" class="question_img">
                 <input type="range" id="exercise-hours" name="exercise-hours" min="0" max="40" oninput="document.getElementById('exercise-value').innerText = this.value">
                 <span id="exercise-value">0</span> hours
             </div>
             <button type="submit" id="submit-btn">Submit</button>
         </div>
     </form>
-    <script src="intial_process.js"></script>
+    <script src="../scripts/intial_process.js"></script>
 </body>
 </html>

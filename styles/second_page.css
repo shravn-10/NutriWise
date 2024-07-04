@@ -5,8 +5,8 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure full viewport height */
-    background-image: url('survey_result.png');
+    min-height: 100vh;
+    background-image: url('../assets/survey_result.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,60 +16,60 @@ body {
 
 .container {
     display: flex;
-    justify-content: center; /* Center the main content horizontally */
+    justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack columns vertically */
+    flex-direction: column;
     width: 80%;
     max-width: 1200px;
     background-color: rgb(180, 180, 180);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-top: 150px; /* Adjust top margin as needed */
+    margin-top: 150px;
     margin-left: 150px;
 }
 
 .main-header {
     width: 100%;
-    margin-bottom: 20px; /* Add margin to separate from container */
-    text-align: center; /* Center align text */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .left-column {
     flex: 1;
-    width: 100%; /* Ensure left column takes full width */
-    margin-bottom: 20px; /* Add space between cards */
+    width: 100%;
+    margin-bottom: 20px;
     
 }
 
 .right-column {
     flex: 2;
-    width: 100%; /* Ensure right column takes full width */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Center content horizontally */
+    justify-content: center;
     align-items: center;
 }
 
 h1 {
     color: #ffffff;
-    font-size: 2.5em; /* Increase header font size */
+    font-size: 2.5em;
 }
 
 .result-card {
     width: 100%;
-    max-width: 400px; /* Adjust max width of result cards */
-    padding: 20px; /* Increase padding for better spacing */
+    max-width: 400px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    margin-bottom: 20px; /* Add space between result cards */
+    margin-bottom: 20px;
     margin-left:30%;
     font-weight: bolder;
 }
 
 .result-card p {
     margin: 0;
-    font-size: 1.2em; /* Increase text size inside result cards */
+    font-size: 1.2em;
     color: #555;
 }
 
@@ -94,14 +94,14 @@ h1 {
 
 @media (max-width: 768px) {
     .container {
-        width: 60%; /* Adjust width for smaller screens */
+        width: 60%; 
     }
 
     .left-column {
-        margin-left: 0; /* Reset margin for smaller screens */
+        margin-left: 0;
     }
 
     .result-card {
-        font-size: 1em; /* Decrease text size for smaller screens */
+        font-size: 1em;
     }
 }

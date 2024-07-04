@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
-    background-image: url('main_back.png');
+    background-image: url('../assets/main_back.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -40,7 +40,7 @@ form {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     z-index: -1;
-    text-align: center; /* Center the text inside the card */
+    text-align: center;
 }
 
 .card.active {
@@ -51,9 +51,9 @@ form {
 
 .question {
     margin-bottom: 15px;
-    font-size: 1.4em; /* Increase text size */
-    line-height: 1.5; /* Improve readability with increased line height */
-    color: #333; /* Darker color for better contrast */
+    font-size: 1.4em; 
+    line-height: 1.5; 
+    color: #333; 
     text-align: center;
 }
 
@@ -76,12 +76,12 @@ input[type="range"], input[type="text"] {
 }
 
 #cuisine,#dietary-restrictions{
-    font-size: 1.2em; /* Increase the font size for user input */
-    padding: 10px; /* Add padding for a larger text box */
-    width: 100%; /* Make the text box take the full width */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    border-radius: 5px; /* Rounded corners for better aesthetics */
-    border: 1px solid #ccc; /* Light gray border */
+    font-size: 1.2em; 
+    padding: 10px; 
+    width: 100%; 
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .radio-group {
@@ -98,7 +98,7 @@ input[type="range"] {
     display: block;
     width: 50%;
     padding: 10px;
-    margin-top: 20px; /* Add space between the image and the slider */
+    margin-top: 20px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left:22%;

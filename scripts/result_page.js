@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Retrieve values from localStorage
+    
     const height = localStorage.getItem('height');
     const weightLift = localStorage.getItem('weightLift');
     const ageDecade = localStorage.getItem('ageDecade');
     const exerciseHours = localStorage.getItem('exerciseHours');
 
-    // Check if values exist before using them
     if (height && weightLift && ageDecade && exerciseHours) {
         console.log('Height:', height);
         console.log('Weight to Lift:', weightLift);
         console.log('Age Decade:', ageDecade);
         console.log('Exercise Hours:', exerciseHours);
 
-        // Categorize BMI
         const categorizeBMI = (weightLift) => {
             if (weightLift < 18.5) {
                 return 'Underweight';
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         };
 
-        // Categorize age decade
         const categorizeAgeDecade = (ageDecade) => {
             const age = parseInt(ageDecade);
             if (age < 30) {
@@ -43,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         };
 
-        // Categorize exercise hours
+
         const categorizeExerciseHours = (exerciseHours) => {
             const hours = parseInt(exerciseHours);
             if (hours < 5) {
@@ -57,11 +54,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         };
 
-        // Display messages
+        
         const displayMessage = (bmiCategory, ageCategory, exerciseCategory) => {
             let message = '';
 
-            // BMI
+            
             if (bmiCategory === 'Healthy BMI') {
                 message += 'You have a healthy BMI. ';
             } else if (bmiCategory === 'Underweight') {
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 message += 'Consider a healthy diet and exercise plan. ';
             }
 
-            // Age
+            
             if (ageCategory === '10-30') {
                 message += 'You are in your prime years. ';
             } else if (ageCategory === '30-50') {
@@ -81,7 +78,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 message += 'You are very experienced. ';
             }
 
-            // Exercise
+            
             if (exerciseCategory === '0 to 5') {
                 message += 'Try to exercise more regularly.';
             } else if (exerciseCategory === '5 to 15') {
@@ -95,12 +92,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return message;
         };
 
-        // Get the categories
+        
         const bmiCategory = categorizeBMI(weightLift);
         const ageCategory = categorizeAgeDecade(ageDecade);
         const exerciseCategory = categorizeExerciseHours(exerciseHours);
 
-        // Display the results
+        
         document.getElementById('bmi-result').innerHTML = `<p>BMI Category: ${bmiCategory}</p>`;
         document.getElementById('age-decade-result').innerHTML = `<p>Age Decade: ${ageCategory}</p>`;
         document.getElementById('exercise-hours-result').innerHTML = `<p>Exercise Hours: ${exerciseCategory}</p>`;

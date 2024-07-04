@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Reset form on page load
+    
     window.onload = function() {
         document.querySelector('form').reset();
-        document.getElementById('height-value').innerText = '100'; // Set initial height value
+        document.getElementById('height-value').innerText = '100'; 
     };
 
-    // Show the first card initially
     const cards = document.querySelectorAll('.card');
     let currentCardIndex = 0;
     showCard(currentCardIndex);
 
-    // Add event listeners to next buttons
     const nextButtons = document.querySelectorAll('.next-btn');
     nextButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
@@ -35,12 +33,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    // Handle form submission
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        // Retrieve form values
         const cuisine = document.getElementById('cuisine').value;
         const dietaryRestrictions = document.getElementById('dietary-restrictions').value;
         const purposeRadios = document.getElementsByName('purpose_website');
@@ -56,7 +52,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const ageDecade = document.getElementById('age-decade').value;
         const exerciseHours = document.getElementById('exercise-hours').value;
 
-        // Store values in localStorage
         localStorage.setItem('cuisine', cuisine);
         localStorage.setItem('dietaryRestrictions', dietaryRestrictions);
         localStorage.setItem('purpose', purpose);
@@ -65,7 +60,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         localStorage.setItem('ageDecade', ageDecade);
         localStorage.setItem('exerciseHours', exerciseHours);
 
-        // Redirect to second_page.html
         window.location.href = 'second_page.html';
     });
 });
