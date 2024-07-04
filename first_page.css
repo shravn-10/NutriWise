@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    background-image: url('main_back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.card {
+    margin-top: 320px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: -1;
+    text-align: center; /* Center the text inside the card */
+}
+
+.card.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1;
+}
+
+.question {
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Increase text size */
+    line-height: 1.5; /* Improve readability with increased line height */
+    color: #333; /* Darker color for better contrast */
+    text-align: center;
+}
+
+.question_img {
+    width: 30%;
+}
+
+label {
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="range"], input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cuisine,#dietary-restrictions{
+    font-size: 1.2em; /* Increase the font size for user input */
+    padding: 10px; /* Add padding for a larger text box */
+    width: 100%; /* Make the text box take the full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+input[type="range"] {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px; /* Add space between the image and the slider */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left:22%;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#submit-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+    }
+
+    button {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
