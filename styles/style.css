@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -26,6 +26,8 @@ body {
 .navbar .nav-links {
     display: flex;
     align-items: center;
+    font-size: 1.3em;
+    margin-right:20px;
 }
 .navbar a {
     color: white;
@@ -120,7 +122,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    height: 100px;
     position: relative;
     bottom: 0;
     width: 100%;
