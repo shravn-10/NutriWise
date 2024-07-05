@@ -27,7 +27,7 @@ async function fetchRecipes() {
 function displayRecipe(index) {
     const recipe = recipes[index];
     if (recipe) {
-        const { label, image, cuisineType, healthLabels, url, calories, dietLabels, mealType, dishType, yield: servings } = recipe;
+        const { label, image, url, calories, yield: servings } = recipe;
         
         recipeContainer.innerHTML = `
             <h2>${label}</h2>
