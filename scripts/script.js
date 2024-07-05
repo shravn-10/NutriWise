@@ -8,7 +8,7 @@ const recipeFindButton = document.getElementById('recipe-find-button');
 
 let currentRecipeIndex = 0;
 let recipes = [];
-let likedCuisines = [];
+let likedRecipes = [];
 let rightArrowClickCount = 0;
 
 async function fetchRecipes() {
@@ -27,18 +27,13 @@ async function fetchRecipes() {
 function displayRecipe(index) {
     const recipe = recipes[index];
     if (recipe) {
-        const { label, image, cuisineType, healthLabels, url, calories, dietLabels, mealType, dishType, yield: servings } = recipe;
+        const { label, image, url, calories, yield: servings } = recipe;
         
         recipeContainer.innerHTML = `
             <h2>${label}</h2>
             <img src="${image}" alt="${label}">
-            <!-- <p><strong>Cuisine Type:</strong> ${cuisineType ? cuisineType.join(', ') : 'Unknown Cuisine'}</p> -->
-            <!-- <p><strong>Health Labels:</strong> ${healthLabels ? healthLabels.join(', ') : 'None'}</p> -->
-            <p><strong>URL:</strong> <a href="${url}" target="_blank">View Recipe</a></p>
+            <p><strong>Source:</strong> <a href="${url}" target="_blank">View Recipe</a></p>
             <p><strong>Calories:</strong> ${calories ? calories.toFixed(2) : 'N/A'}</p>
-            <!-- <p><strong>Diet Labels:</strong> ${dietLabels ? dietLabels.join(', ') : 'None'}</p> -->
-            <!-- <p><strong>Meal Type:</strong> ${mealType ? mealType.join(', ') : 'N/A'}</p> -->
-            <!-- <p><strong>Dish Type:</strong> ${dishType ? dishType.join(', ') : 'N/A'}</p> -->
             <p><strong>Servings:</strong> ${servings ? servings : 'N/A'}</p>
         `;
     } else {
@@ -61,8 +56,6 @@ rightArrow.addEventListener('click', async () => {
         if (rightArrowClickCount >= 2) {
             signInButton.style.display = 'block';
             recipeFindButton.style.display = 'block';
-            // signInButton.classList.add('zoom');
-            // recipeFindButton.classList.add('zoom');
         }
     } else {
         await fetchRecipes();
@@ -71,8 +64,8 @@ rightArrow.addEventListener('click', async () => {
 
 likeButton.addEventListener('click', () => {
     const recipe = recipes[currentRecipeIndex];
-    likedCuisines.push(...(recipe.cuisineType || []));
-    alert(`Liked! Cuisines saved: ${likedCuisines.join(', ')}`);
+    likedRecipes.push({ label: recipe.label, uri: recipe.url });
+    alert(`Liked! Recipes saved: ${likedRecipes.map(item => item.label).join(', ')}`);
 });
 
 nahButton.addEventListener('click', async () => {
@@ -100,6 +93,7 @@ nahButton.addEventListener('click', async () => {
 function NavigateToRecipeFinder() {
     window.location.href = "pages/recipeFinder.html";
 }
+
 function NavigateToFirstPage() {
     window.location.href = "pages/first_page.html";
 }
