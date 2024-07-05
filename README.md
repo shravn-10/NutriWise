@@ -1,6 +1,8 @@
 # NutriWise
 <img src="https://github.com/shravn-10/NutriWise/assets/99039316/e0654ec6-61ef-4d43-8eb2-787fb6f8d28f" alt="NutriWise-LOGO.png" width=40% height=40%>
 
+[DEMO](https://shravn-10.github.io/NutriWise/)
+
 ### Problem Statement
 > People frequently find it difficult to keep up a healthy diet in today's hectic environment because there aren't enough readily available and varied healthy food options. Foodies often become bored with the same old dinner options, while health-conscious people struggle to find wholesome substitutes for their favorite recipes. In addition, a lot of individuals order from restaurants, which frequently put taste before health, resulting in an imbalanced diet.
 
