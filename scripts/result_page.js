@@ -11,16 +11,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Age Decade:', ageDecade);
         console.log('Exercise Hours:', exerciseHours);
 
-        const categorizeBMI = (weightLift) => {
-            if (weightLift < 18.5) {
+        var heightm=height/100;
+        var bmi=weightLift/(heightm*heightm);
+        const categorizeBMI = (bmi) => {
+            if (bmi < 18.5) {
                 return 'Underweight';
-            } else if (weightLift >= 18.5 && weightLift < 25) {
+            } else if (bmi >= 18.5 && bmi < 25) {
                 return 'Healthy BMI';
-            } else if (weightLift >= 25 && weightLift < 30) {
+            } else if (bmi >= 25 && bmi < 30) {
                 return 'Overweight';
-            } else if (weightLift >= 30 && weightLift < 35) {
+            } else if (bmi >= 30 && bmi < 35) {
                 return 'Class I obesity';
-            } else if (weightLift >= 35 && weightLift < 40) {
+            } else if (bmi >= 35 && bmi < 40) {
                 return 'Class II obesity';
             } else {
                 return 'Class III obesity';
@@ -93,7 +95,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
 
         
-        const bmiCategory = categorizeBMI(weightLift);
+        const bmiCategory = categorizeBMI(bmi);
         const ageCategory = categorizeAgeDecade(ageDecade);
         const exerciseCategory = categorizeExerciseHours(exerciseHours);
 

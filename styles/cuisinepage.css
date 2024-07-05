@@ -9,6 +9,39 @@ body {
     background-position: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    height:80px;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar img {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+}
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    margin-right:20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -93,7 +126,10 @@ main {
     cursor: pointer;
     transition: border 0.3s;
 }
-
+.recipe-card:hover {
+    transform: scale(1.1); /* This enlarges the card by 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow to give a more pronounced effect */
+}
 .recipe-card img {
     width: 100%;
     height: 150px;
@@ -167,4 +203,3 @@ main {
     color: #4CAF50;
     text-decoration: none;
 }
-

@@ -1,6 +1,5 @@
 body {
   font-family: "Poppins", sans-serif;
-  /* background: linear-gradient(to right, #eeedf0, #050505); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +9,49 @@ body {
   color: #000;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  /* padding: 10px 20px; */
+  color: white;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
 .chat-container {
+  margin-top: 8% !important; /* Adjusted for fixed navbar */
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -25,7 +66,6 @@ body {
 }
 
 .header {
-  /* background: linear-gradient(to right, #5fdf5d, #e6ebe5); */
   padding: 20px 10px;
   text-align: center;
   border-bottom: 1px solid #000;
@@ -63,7 +103,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:rgb(10, 109, 4);
+  background-color: rgb(10, 109, 4);
   padding: 10px;
   border-radius: 0 0 15px 15px;
 }
@@ -130,8 +170,6 @@ button:hover {
   border-radius: 10px;
 }
 
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -150,7 +188,6 @@ button:hover {
 .preformatted {
   white-space: pre-line;
   color: #fd9800;
-
 }
 
 .profile-image {
