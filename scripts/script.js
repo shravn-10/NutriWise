@@ -8,7 +8,7 @@ const recipeFindButton = document.getElementById('recipe-find-button');
 
 let currentRecipeIndex = 0;
 let recipes = [];
-let likedCuisines = [];
+let likedRecipes = [];
 let rightArrowClickCount = 0;
 
 async function fetchRecipes() {
@@ -71,8 +71,8 @@ rightArrow.addEventListener('click', async () => {
 
 likeButton.addEventListener('click', () => {
     const recipe = recipes[currentRecipeIndex];
-    likedCuisines.push(...(recipe.cuisineType || []));
-    alert(`Liked! Cuisines saved: ${likedCuisines.join(', ')}`);
+    likedRecipes.push({ label: recipe.label, uri: recipe.url });
+    alert(`Liked! Recipes saved: ${likedRecipes.map(item => item.label).join(', ')}`);
 });
 
 nahButton.addEventListener('click', async () => {
@@ -100,6 +100,7 @@ nahButton.addEventListener('click', async () => {
 function NavigateToRecipeFinder() {
     window.location.href = "pages/recipeFinder.html";
 }
+
 function NavigateToFirstPage() {
     window.location.href = "pages/first_page.html";
 }
